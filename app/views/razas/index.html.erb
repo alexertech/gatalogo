@@ -1,14 +1,32 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Razas</h1>
+<h1 class="subtitle">Razas</h1>
 
-<div id="razas">
-  <% @razas.each do |raza| %>
-    <%= render raza %>
-    <p>
-      <%= link_to "Show this raza", raza %>
-    </p>
-  <% end %>
+<div class="columns has-background-info has-text-white-ter">
+  <div class="column is-one-quarter">
+    Nombre
+  </div>
+  <div class="column">
+    Descripcion
+  </div>
+  <div class="column is-one-quarter">
+  </div>
 </div>
+
+<% @razas.each do |raza| %>
+<div class="columns">
+  <div class="column is-one-quarter">
+    <%= raza.nombre %>
+  </div>
+  <div class="column">
+    <%= raza.descripcion %>
+  </div>
+  <div class="column is-one-quarter">
+    <%= link_to "Consultar", raza %> | 
+    <%= link_to "Modificar", edit_raza_path(raza) %>
+  </div>
+</div>
+<% end %>
+
 
 <%= link_to "New raza", new_raza_path %>
