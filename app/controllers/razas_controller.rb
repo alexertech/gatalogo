@@ -1,5 +1,5 @@
 class RazasController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_usuario!, only: %i[new edit update destroy]
   before_action :set_raza, only: %i[show edit update destroy]
 
   # GET /razas or /razas.json
