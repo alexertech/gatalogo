@@ -65,6 +65,6 @@ class RazasController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def raza_params
-    params.require(:raza).permit(:nombre, :descripcion)
+    params.require(:raza).permit(:nombre, :descripcion, :personalidad, :tamano, :pelaje)
   end
 end

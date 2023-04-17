@@ -22,6 +22,21 @@
   </div>
 
   <div>
+    <%= form.label :personalidad, style: "display: block" %>
+    <%= form.text_area :personalidad %>
+  </div>
+
+  <div>
+    <%= form.label "Tamaño", style: "display: block" %>
+    <%= form.text_field :tamano %>
+  </div>
+
+  <div>
+    <%= form.label :pelaje, style: "display: block" %>
+    <%= form.text_field :pelaje %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
