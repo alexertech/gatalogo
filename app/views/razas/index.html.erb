@@ -23,7 +23,11 @@
   </div>
   <div class="column is-one-quarter">
     <%= link_to "Consultar", raza %> | 
-    <%= link_to "Modificar", edit_raza_path(raza) %>
+    <%= link_to "Modificar", edit_raza_path(raza) %> | 
+     <%= link_to "Eliminar", raza_path(raza), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Estas seguro?"
+                  } %>
   </div>
 </div>
 <% end %>

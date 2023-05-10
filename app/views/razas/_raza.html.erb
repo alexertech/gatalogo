@@ -1,32 +1,42 @@
-<div id="<%= dom_id raza %>">
-  <p>
-    <strong>Nombre:</strong>
-    <%= raza.nombre %>
-  </p>
-
-  <p>
-    <strong>Descripcion:</strong>
-    <%= raza.descripcion %>
-  </p>
-
-  <p>
-    <strong>personalidad:</strong>
-    <%= raza.personalidad %>
-  </p>
-
-  <p>
-    <strong>Tamaño:</strong>
-    <%= raza.tamano %>
-  </p>
-
-  <p>
-    <strong>Pelaje:</strong>
-    <%= raza.pelaje %>
-  </p>
-
-  <p>
-    <strong>Foto:</strong>
-    <%= image_tag raza.foto.variant(:miniatura) %>
-  </p>
-
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+        <% if raza.foto.attached?  %>
+          <%= image_tag raza.foto.variant(:miniatura) %>
+        <% else %>
+          <%= image_tag "missing.png", style: 'width: 100px' %>  
+        <% end %>
+    </div>
+    <div class="media-content">
+      <div class="field is-grouped is-grouped-multili">
+        <div class="control">
+          <div class="tags has-addons">
+            <span class="tag is-dark">Nombre</span>
+            <span class="tag is-info"><%= raza.nombre %></span>
+          </div>
+        </div>
+        <div class="control">
+          <div class="tags has-addons">
+            <span class="tag is-dark">Personalidad</span>
+            <span class="tag is-info"><%= raza.personalidad %></span>
+          </div>
+        </div>
+        <div class="control">
+          <div class="tags has-addons">
+            <span class="tag is-dark">Tamaño</span>
+            <span class="tag is-info"><%= raza.tamano %></span>
+          </div>
+        </div>
+        <div class="control">
+          <div class="tags has-addons">
+            <span class="tag is-dark">Pelaje</span>
+            <span class="tag is-info"><%= raza.pelaje %></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <%= raza.descripcion %>
+      </div>
+    </div>
+  </article>
 </div>
