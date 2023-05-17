@@ -1,24 +1,15 @@
-# README
+# Gatalogo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Catalogo informativo sobre razas de gatos.
 
-Things you may want to cover:
+    - Nombre Raza
+    - Pelaje
+    - Tamaño
+    - Personalidad
+    - Descripción
 
-* Ruby version
+- Cualquiera se puede registrar como contribuidor. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    - Inicialmente un contribuidor puede crear y actualizar su raza publicada.
+    - Un administrador o un contribuidor con mayor rango puede editar o eliminar una publicación.
+    
